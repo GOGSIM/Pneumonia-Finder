@@ -17,7 +17,7 @@ def start(message):
     time.sleep(2)
     bot.send_message(message.chat.id, 'Пришлите пожалуйста рентгеновский снимок вашей грудной клетки. 🩻')
     
-model=load_model('C:/Users/names/Downloads/code/model_ASV.h5')      
+model=load_model(./model_ASV.h5')      
 
 @bot.message_handler(content_types=['photo'])
 def photo(message):
