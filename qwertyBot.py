@@ -17,7 +17,12 @@ def start(message):
     time.sleep(2)
     bot.send_message(message.chat.id, 'Пришлите пожалуйста рентгеновский снимок вашей грудной клетки. 🩻')
     
-model=load_model(./model_ASV.h5')      
+response = requests.get('https://github.com/GOGSIM/Pneumonia-Finder/blob/7a1f41f2a52a5825ce54a1c66c10947d55eaa3e4/model_ASV.h5', stream=True) 
+model = io.BytesIO()
+for chunk in response.iter_content(chunk_size=8192):
+    if chunk:
+        model.write(chunk)
+model.seek(0)          
 
 @bot.message_handler(content_types=['photo'])
 def photo(message):
