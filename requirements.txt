@@ -3,3 +3,6 @@ numpy==1.26.4
 keras==2.14.0
 tensorflow==2.14.0
 requests==2.31.0
+tensorflow-estimator==2.14.0
+tensorflow-intel==2.14.0
+tensorflow-io-gcs-filesystem==0.31.0
