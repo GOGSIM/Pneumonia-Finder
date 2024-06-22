@@ -6,6 +6,7 @@ from keras.preprocessing import image
 from keras.models import load_model 
 from keras.applications.vgg16 import preprocess_input 
 import numpy as np 
+import requests
 
 bot = telebot.TeleBot('7289867286:AAHWCSf58-R9BFrO3UoXcoNZPoeIuCWuJqU')
 
