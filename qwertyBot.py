@@ -8,7 +8,7 @@ from keras.applications.vgg16 import preprocess_input
 import numpy as np 
 import requests
 
-bot = telebot.TeleBot('7289867286:AAHWCSf58-R9BFrO3UoXcoNZPoeIuCWuJqU')
+bot = telebot.TeleBot('YOURBOTID')
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -69,3 +69,4 @@ def takephoto(message):
         bot.send_message(message.chat.id, 'Записаться на флюорографию 🩻', reply_markup=markup)
 
 bot.polling(non_stop=True)
+
